@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Profile & Projects</title>
+    <style>
+        body {
+            font-family: Lora !important;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            font-family: Lora !important;
+
+        }
+        .header {
+            background: white;
+            color: cornflowerbgollue;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            width: 95%;
+        }
+
+        
+main {
+    margin: 20px auto;
+}
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tile {
+    flex: 1 0 200px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+
+        .ellipse-img {
+            width: 300px;  /* Set the desired width */
+            height: 200px; /* Set the desired height */
+            object-fit: cover; /* Ensures the image covers the area */
+            border-radius: 50%; /* Makes it elliptical */
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            min-height: 500px;
+            border-radius: 8px;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        nav {
+            color: goldenrod !important;
+            padding: 15px;
+            text-align: right;
+            font-size: 18px;
+            position: sticky;
+            padding-right: 100px;
+            top: 0;
+            width: 95%;
+            z-index: 1000;
+        }
+        nav a {
+            color: mediumblue !important;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        pre {
+            background: #eef;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        SreelakshmiNarayanan Muthuraj
+    </div>
+
+    <nav>
+        <a href="#bio">About me</a>
+        <a href="#k6-content">K6 Performance Testing</a>
+        <a href="#ckd-project">CKD ML Prediction Engine</a>
+        <a href="#nyc-taxi">NYC Taxi Analysis</a>
+    </nav>
+
+    <div class="container">
+        <section id="bio">
+
+            <main>
+                <section class="tiles-container">
+                    <div class="tile">
+                        <h2>About me</h2>
+                        <img src='images/sree.JPG' class="ellipse-img"></img><p style="text-align: center;">18+ years of IT industry experience across BFSI and Supply Chain domains. Specialized in web application development, mobile app real-time analytics, and computer vision.</p>
+                    </div>
+
+
+                    <div class="tile">
+                        <h2>Summary</h2>
+
+                        <ul>
+                            <li>Enterprise Architect with expertise in Java, Spring Boot, Gen AI, RAG , Python, Angular, React, Node.js, microservices, and data engineering.</li>
+                            <li>Enthusiast in public and private cloud</li>
+                            <li>Worked with major financial industry clients across USA, India and Asia Pacific, supply chain organization and aviation sectors.</li>
+                            <li>Led architectural standards and innovative cloud migration & machine learning solutions at various Enterprise and Start up companies</li>
+                            <li> Build IP products across deep tech and finanacial portfolio.</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tile">
+                        <p>My Talks: 
+                            <div> 
+                                <a href="https://www.youtube.com/watch?v=nlSegGLfcjI&t=1100s" target="_blank">@Software Architect Community Bengaluru</a></p>
+                            </div>
+                         <p>Publications: 
+                            <div>
+                            <a href="https://scholar.google.com/citations?user=DUyMUtsAAAAJ&hl=en" target="_blank">Google Scholar publications</a></p>
+                     </div>
+
+                </section>
+            </main>
+        </section>
+
+        <section id="k6-content">
+            <h1>K6 Performance Testing Guide</h1>
+            <p >A structured overview of K6 Performance Testing, including architecture, execution, and monitoring.</p>
+
+            <h2>K6 Architecture</h2>
+            <p>K6 is written in Goja, an ECMAScript 5.1 implementation in pure Go. It is highly configurable, script-driven, and integrates with CI/CD pipelines.</p>
+            <ul>
+                <li>Does not require Node.js</li>
+                <li>Highly configurable and script-driven</li>
+                <li>Integrates seamlessly with CI/CD</li>
+                <li>Uses goroutines to simulate virtual users</li>
+                <li>Supports distributed load testing using Kubernetes</li>
+            </ul>
+
+            <img src="images/slide_1.png" alt="K6 Introduction">
+            <img src="images/slide_2.png" alt="K6 Architecture">
+
+            <h2>Running K6</h2>
+            <pre>k6 new</pre>
+            <pre>k6 run script.js</pre>
+            <pre>k6 run --vus 10 --duration 10s simple.js</pre>
+            <img src="images/slide_3.png" alt="Running K6">
+
+            <h2>K6 Life Cycle</h2>
+            <p>Simulation of real-time traffic using shared arrays and the faker library.</p>
+            <pre>
+var data = new SharedArray("users", function() { 
+    return JSON.parse(open('./users.json')).users; 
+});
+            </pre>
+
+            <h2>Custom Metrics</h2>
+            <p>System metrics capture success counts, failure trends, and latency distributions.</p>
+            <pre>
+const http403StatusCounter = new Counter("http403StatusCounter");
+if (res.status === 403) { http403StatusCounter.add(1); }
+            </pre>
+
+            <h2>Real-time Monitoring of K6 Tests</h2>
+            <pre>k6 run --out output-statsd script.js</pre>
+            <p>GitHub Repository: <a href="https://github.com/sreelakshminarayanan/k6-primer" target="_blank">K6 Primer GitHub Repo</a></p>
+        </section>
+
+        <section id="ckd-project">
+            <h1>CKD Machine Learning Prediction Engine</h1>
+            <p >This project aims to predict Chronic Kidney Disease (CKD) using machine learning techniques.</p>
+            <p>GitHub Repository: <a href="https://github.com/sreelakshminarayanan/CKD-Machine-Learning-Prediction-Engine" target="_blank">CKD ML Prediction Engine</a></p>
+
+            <h2>Project Features</h2>
+            <ul>
+                <li>Predictive Modeling: Utilizes machine learning to forecast CKD risk.</li>
+                <li>Decision Tree Generation: Helps in understanding disease progression.</li>
+                <li>Exploratory Data Analysis (EDA): Identifies patterns in clinical data.</li>
+                <li>Regression & Cluster Analysis: Applies regression techniques and clustering methods.</li>
+                <li>Time Series Analysis: Forecasts malaria incidence for proactive healthcare planning.</li>
+            </ul>
+
+            <h2>Scope</h2>
+            <p>The tool focuses on predictive modeling, data analysis, decision trees, regression, clustering, and time series forecasting.</p>
+            <p> Use Case Diagram</p>
+            <img src="images/UseCase.PNG" alt="Use Case Diagram">
+
+
+            <h2>Detailed Design</h2>
+        
+            <img src="images/Flow1.png" alt="Use Case Diagram">
+
+            <img src="images/Flow2.png" alt="Use Case Diagram">
+
+
+            <h2>Conclusion</h2>
+            <p>This project leverages machine learning and data mining techniques to enhance early disease detection. By analyzing clinical data, it helps healthcare organizations identify trends, improving patient outcomes.</p>
+        </section>
+
+
+
+        <section id="nyc-taxi">
+            <h1>NYC Taxi Analysis</h1>
+
+            <h3>Domain and Context:</h3>
+            <p>
+                Advent of technology in field of transportation especially in the taxi industry have created a several challenges to
+                cab industry. Electronic dispatchment has replaced the traditional VHF radio system. these mobile data terminals
+                are installed in each vehicle typically provides information on GPS localization and distance. This information
+                collected over a period of time will be serving as dataset to analyse and predict the model for future.
+            </p>
+            <h3>
+                Problem:
+            </h3>
+            <p>
+            To improve the efficiency of electronic taxi dispatching systems it is important predict the fare. Given the
+            information on historical rides and fare in centralized system, we need to analyse and predict the near accuracy
+            fare using the optimal model.'
+            
+        </p>
+
+
+            <p>This project involves exploratory data analysis and predictive modeling on NYC taxi datasets using Jupyter Notebooks.</p>
+            <p>GitHub Repository: <a href="https://github.com/sreelakshminarayanan/nyctaxianalysis" target="_blank">NYC Taxi Analysis GitHub Repository</a></p>
+
+            <h2>Jupyter Notebook Summaries</h2>
+
+            <h3>1. Data Cleaning and Preprocessing</h3>
+            <p>This notebook focuses on handling missing values, removing outliers, and formatting date-time columns for efficient analysis.</p>
+
+            <h3>2. Exploratory Data Analysis (EDA)</h3>
+            <p>Includes visualization of ride durations, trip distributions, passenger counts, and geographic mapping of pick-ups/drop-offs.</p>
+
+            <h3>3. Fare Prediction Model</h3>
+            <p>Develops a machine learning model to predict taxi fares based on trip distance, time, passenger count, and traffic conditions.</p>
+
+            <h3>4. Time Series Analysis</h3>
+            <p>Performs trend analysis on ride volumes, peak hours, and forecasting future demand using ARIMA and LSTM models.</p>
+
+            <h3>5. Geographic Heatmap Analysis</h3>
+            <p>Uses folium and geopandas to visualize ride densities and hotspots across NYC.</p>
+
+            <h3>6. Impact of Weather on Taxi Demand</h3>
+            <p>Analyzes how weather patterns affect ride volume, using external weather APIs for historical data integration.</p>
+        </section>
+
+    </div>
+
+</body>
+</html>
