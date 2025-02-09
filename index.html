@@ -37,7 +37,6 @@ main {
 .tiles-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .tile {
@@ -60,12 +59,28 @@ main {
             object-fit: cover; /* Ensures the image covers the area */
             border-radius: 50%; /* Makes it elliptical */
         }
+
+        .banner {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            background: azure;
+            padding-left: 20px;
+            padding-right:20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border-radius: 8px;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            text-align: center
+        }
         .container {
             width: 90%;
             max-width: 1200px;
             margin: auto;
             background: white;
-            padding: 20px;
+            padding-left: 20px;
+            padding-right:20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             min-height: 500px;
@@ -114,7 +129,6 @@ main {
         }
         ul {
             padding: 15px;
-            background: #f9f9f9;
             border-radius: 8px;
         }
     </style>
@@ -125,12 +139,25 @@ main {
         SreelakshmiNarayanan Muthuraj
     </div>
 
+
+ 
+
+
     <nav>
         <a href="#bio">About me</a>
         <a href="#k6-content">K6 Performance Testing</a>
         <a href="#ckd-project">HealthCare Prediction Engine</a>
         <a href="#nyc-taxi">Supply Chain Demand ForeCasting</a>
     </nav>
+
+    <div class="banner">
+        தொட்டனைத் தூறும் மணற்கேணி மாந்தர்க்குக் <br/>
+        கற்றனைத் தூறும் அறிவு. <br/><br/>
+
+        The more you dig a sand-spring, more the flow. The more you learn more the wisdom
+
+        <div style="text-align: right;"> <b>By Tamil Poet Thiruvallur </b></div>
+    </div>    
 
     <div class="container">
         <section id="bio">
@@ -147,11 +174,12 @@ main {
                         <h2>Summary</h2>
 
                         <ul>
-                            <li>Enterprise Architect with expertise in Java, Spring Boot, Gen AI, RAG , Python, Angular, React, Node.js, microservices, and data engineering.</li>
+                            <li>Enterprise Architect with expertise in Java, cloud, Spring Boot, Gen AI, RAG , Python, Angular, React, Node.js, microservices, and data engineering.</li>
                             <li>Enthusiast in public and private cloud</li>
-                            <li>Worked with major financial industry clients across USA, India and Asia Pacific, supply chain organization and aviation sectors.</li>
-                            <li>Led architectural standards and innovative cloud migration & machine learning solutions at various Enterprise and Start up companies</li>
-                            <li> Build IP products across deep tech and finanacial portfolio.</li>
+                            <li>Worked with major financial industry clients across USA, India and Asia Pacific, Supply chain organization and Aviation sectors.</li>
+                            <li>Led setting up architectural standards and built innovative cloud migration & machine learning solutions at various Enterprise and Start up companies</li>
+                            <li> Build Innovative products using deep tech and won many hackathons </li>
+                            <li> Navigated from modernizing the legacy application built in 1980's using assembler & z/os to deep tech using ai </li>
                         </ul>
                     </div>
 
@@ -217,7 +245,7 @@ if (res.status === 403) { http403StatusCounter.add(1); }
             <h1>CKD Machine Learning Prediction Engine</h1>
             <p >This project aims to predict Chronic Kidney Disease (CKD) using machine learning techniques.</p>
             <p>GitHub Repository: <a href="https://github.com/sreelakshminarayanan/CKD-Machine-Learning-Prediction-Engine" target="_blank">CKD ML Prediction Engine</a></p>
-
+            <p> An implementation of my Master's Degree project</p>
             <h2>Project Features</h2>
             <ul>
                 <li>Predictive Modeling: Utilizes machine learning to forecast CKD risk.</li>
@@ -250,6 +278,8 @@ if (res.status === 403) { http403StatusCounter.add(1); }
             <h1>NYC Taxi Analysis</h1>
 
             <h3>Domain and Context:</h3>
+            <p> An implementation of my Machine learning's Degree project</p>
+
             <p>
                 Advent of technology in field of transportation especially in the taxi industry have created a several challenges to
                 cab industry. Electronic dispatchment has replaced the traditional VHF radio system. these mobile data terminals
@@ -286,6 +316,10 @@ if (res.status === 403) { http403StatusCounter.add(1); }
 
             <h3>5. Geographic Heatmap Analysis</h3>
             <p>Uses folium and geopandas to visualize ride densities and hotspots across NYC.</p>
+
+            <img src="images/fare.PNG" alt="Use Case Diagram">
+
+            <img src="images/count.PNG" alt="Use Case Diagram">
 
             <h3>6. Impact of Weather on Taxi Demand</h3>
             <p>Analyzes how weather patterns affect ride volume, using external weather APIs for historical data integration.</p>
