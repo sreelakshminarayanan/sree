@@ -2,6 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <script>
+        function toggleMenu() {
+            var navLinks = document.getElementById("navLinks");
+            if (navLinks.style.display === "flex") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "flex";
+            }
+        }
+
+        function closeMenu() {
+            var navLinks = document.getElementById("navLinks");
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = "none";
+            }
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Profile & Projects</title>
@@ -139,6 +157,49 @@ main {
             padding: 15px;
             border-radius: 8px;
         }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: black;
+            padding: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding-right: 20px;
+                width: 100%;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: azure;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+                text-align: left;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                width: 100%;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -152,10 +213,14 @@ main {
 
 
     <nav>
-        <a href="#bio">About me</a>
-        <a href="#k6-content">K6 Performance Testing</a>
-        <a href="#ckd-project">HealthCare Prediction Engine</a>
-        <a href="#nyc-taxi">Supply Chain Demand ForeCasting</a>
+
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="nav-links" id="navLinks">
+            <a href="#bio" onClick="closeMenu();">About me</a>
+            <a href="#k6-content" onClick="closeMenu()">K6 Performance Testing</a>
+            <a href="#ckd-project" onClick="closeMenu()">HealthCare Prediction Engine</a>
+            <a href="#nyc-taxi" onClick="closeMenu()">Supply Chain Demand ForeCasting</a>
+        </div>
     </nav>  
 
     <div class="container">
